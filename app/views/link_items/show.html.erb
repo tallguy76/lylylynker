@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Original url:</strong>
+  <%= @link_item.original_url %>
+</p>
+
+<p>
+  <strong>Short name:</strong>
+  <%= @link_item.short_name %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @link_item.password %>
+</p>
+
+<p>
+  <strong>Needs email:</strong>
+  <%= @link_item.needs_email %>
+</p>
+
+<%= link_to 'Edit', edit_link_item_path(@link_item) %> |
+<%= link_to 'Back', link_items_path %>

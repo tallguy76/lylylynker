@@ -1,0 +1,33 @@
+<h1>Listing link_items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Original url</th>
+      <th>Short name</th>
+      <th>Password</th>
+      <th>Needs email</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @link_items.each do |link_item| %>
+      <tr>
+        <td><%= link_item.original_url %></td>
+        <td><%= link_item.short_name %></td>
+        <td><%= link_item.password %></td>
+        <td><%= link_item.needs_email %></td>
+        <td><%= link_to 'Show', link_item %></td>
+        <td><%= link_to 'Edit', edit_link_item_path(link_item) %></td>
+        <td><%= link_to 'Destroy', link_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Link item', new_link_item_path %>
