@@ -1,4 +1,6 @@
 LinkerApp::Application.routes.draw do
+  resources :visitors
+
   resources :link_items
 
   # The priority is based upon order of creation: first created -> highest priority.
